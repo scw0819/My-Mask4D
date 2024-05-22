@@ -1,0 +1,29 @@
+DECODER:
+    #  新加入
+    MASK_CHANNELS: [ 256, 256, 256, 256, 256 ]
+
+    NHEADS: 8
+    DIM_FEEDFORWARD: 1024
+    FEATURE_LEVELS: 3
+    DEC_BLOCKS: 2
+    NUM_QUERIES: 100  #version 28 29为query=90
+    HIDDEN_DIM: 256
+    TR_LIFE: 5
+    POS_ENC:
+        MAX_FREQ: 10000
+        FEAT_SIZE: 256
+        DIMENSIONALITY: 3
+        BASE: 2
+
+###  FEATURE_LEVELS: 2
+#    DEC_BLOCKS: 1  4张卡可跑
+#
+#    FEATURE_LEVELS: 1
+#    DEC_BLOCKS: 1 8张卡可跑
+
+###  FEATURE_LEVELS: 2
+#    DEC_BLOCKS: 2  1张卡可跑
+
+#原始的预训练模型对应的模型结构： FEATURE_LEVELS: 3 DEC_BLOCKS: 2
+##对应version_1的训练模型 FEATURE_LEVELS: 2 DEC_BLOCKS: 1
+#self/query/query_pe coords and coords_pe
