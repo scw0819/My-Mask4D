@@ -88,8 +88,8 @@ def main(w, ckpt, log_file):
         # resume_from_checkpoint=ckpt,
     )
 
-    # trainer.fit(model, data)
-    trainer.fit(model, data, ckpt_path="/mnt/hdd1/scw/code/Mask4D/mask_4d/scripts/experiments/mask_4d/lightning_logs/version_118/checkpoints/last.ckpt")
+    trainer.fit(model, data)
+    # trainer.fit(model, data, ckpt_path="/mnt/hdd1/scw/code/Mask4D/mask_4d/scripts/experiments/mask_4d/lightning_logs/version_118/checkpoints/last.ckpt")
 
 
 def getDir(obj):
