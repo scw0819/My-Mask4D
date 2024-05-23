@@ -43,7 +43,7 @@ def main(w, save_testset):
     w = torch.load(w, map_location="cpu")
     model.load_state_dict(w["state_dict"])
 
-    trainer = Trainer(devices=1, accelerator="gpu")
+    trainer = Trainer(devices=4, accelerator="gpu")
     # trainer = Trainer(gpus=1)
 
     if save_testset:
